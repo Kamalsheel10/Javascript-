@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body style="background-color:#212121; color:#fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        document.querySelector('.language').append(li);
+    }
+    addLang("C++");
+    addLang("Java");
+    addLang("Python");
+    addLang("Swift");
+
+    function addOptiLang(langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLang("Typescript");
+
+    // Edit the 5th children of the list
+    const fifthLang = document.querySelector("li:nth-child(5)");
+    console.log(fifthLang);
+    const newLang = document.createElement('li');
+    newLang.textContent = "React";
+    fifthLang.replaceWith(newLang);
+
+    //Remove the last children from the list
+    const removeLang = document.querySelector("li:last-child");
+    removeLang.remove();
+</script>
+
+</html>
