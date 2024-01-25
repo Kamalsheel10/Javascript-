@@ -8,10 +8,10 @@ form.addEventListener('submit', function (e) {
     const result = document.querySelector("#results");
 
     if (height === "" || height < 0 || isNaN(height)) {
-        result.innerHTML = "Invlaid height, Enter the correct input.";
+        result.innerHTML = "Invalid height, Enter the correct input.";
     }
     else if (weight === "" || weight < 0 || isNaN(weight)) {
-        result.innerHTML = "Invlaid weight, Enter the correct input.";
+        result.innerHTML = "Invalid weight, Enter the correct input.";
     }
     else {
         const bmi = (weight / ((height * height) / 10000)).toFixed(2);

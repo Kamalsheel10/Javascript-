@@ -1,0 +1,117 @@
+<!-- /* let map=new Map;
+map.set("Nep","Nepal")
+map.set("Ind","India")
+map.set("Chin","China")
+
+console.log(map)
+
+for(let [key,value] of map)
+{
+    console.log(`${key}-${key}`)
+}
+
+const coding=["Javascript","C++","Swift","C"]
+coding.forEach(function(lang){
+    console.log(lang)
+})
+
+const codingExtension=[
+    {
+        languageName:"python",
+        languageExtension:".py"
+    },
+    {
+        languageName:"c++",
+        languageExtension:".cpp"
+    },
+    {
+        languageName:"javascript",
+        languageExtension:".mjs"
+    }
+]
+codingExtension.forEach((value,index)=> 
+(    console.log(`At index ${index}, ${value.languageName} has extension of ${value.languageExtension}`))
+)
+
+
+const books = [
+    { title: "Book1", genre: "Non-fiction", publishedDate: 1888, edition: 2004 },
+    { title: "Book2", genre: "Fiction", publishedDate: 1788, edition: 1999 },
+    { title: "Book1", genre: "Fiction", publishedDate: 1238, edition: 2001 },
+    { title: "Book1", genre: "Non-fiction", publishedDate: 1008, edition: 2011 },
+    { title: "Book1", genre: "Non-fiction", publishedDate: 1999, edition: 2010 },
+    { title: "Book1", genre: "Non-fiction", publishedDate: 2001, edition: 2022 },
+    { title: "Book1", genre: "Fiction", publishedDate: 2011, edition: 2014 }
+];
+
+let userBooks=books.filter((date)=>(date.publishedDate>=1999))
+console.log(userBooks)
+
+let genreOfBooks=books.filter((genre)=>(genre.genre==="Non-fiction"))
+console.log("Books having Non-Fiction genre are:\n",genreOfBooks) */
+
+/* const shoppingCart=[
+    {
+        itemName:"iPad",
+        itemPrice:80000
+    },
+    {
+        itemName:"iPhone",
+        itemPrice:100000
+    },
+    {
+        itemName:"Mac",
+        itemPrice:400000
+    }
+]
+
+let priceToPay=shoppingCart.reduce((acc,currVal)=>(acc+currVal.itemPrice),0)
+console.log(priceToPay) */
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision</title>
+ </head>
+ <body style="background-color: #212121; color:#fff">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+ </body>
+ <script>
+    const parent=document.querySelector(".parent")
+    console.log(parent)
+    console.log(parent.children)
+    console.log(parent.children[3].innerHTML)
+    parent.children[4].innerHTML="Saturday"
+    console.log(parent.children[4].innerHTML)
+
+    for(let i=0; i< parent.children.length; i++)
+    {
+        console.log(parent.children[i].innerHTML)
+        parent.children[i].style.marginBottom="20px"
+    }
+    parent.children[0].style.backgroundColor="green"
+    parent.children[1].style.color="orange"
+
+    console.log(parent.firstElementChild)
+    console.log(parent.lastElementChild)
+
+    const div=document.createElement("div")
+    console.log(div)
+    div.className="myDiv"
+    div.id=Math.floor((Math.random()*100)+1)
+    div.style.backgroundColor="red";
+    div.innerHTML="Hello, javaScript is very complex. I hope no one learns this shit"
+    div.style.marginTop="122px";
+    document.body.appendChild(div)
+ </script>
+ </html>

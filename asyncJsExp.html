@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Learning Web Development</h1>
+    <button id="stop">Stop</button>
+    <br> <br> <br> <br> <br> <br>
+    <hr>
+    <br> <br> <br> <br> <br> <br>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
+</body>
+<!-- <script>
+
+    // setTimeout
+
+    const infoText = function () {
+        console.log("Hi, I am Kamalsheel Mainali. Currently, I am learning JavaScript");
+    }
+
+    const channgeHeader = document.querySelector("h1")
+    setTimeout(infoText, 4000);
+    const changeMe = setTimeout(function () {
+        channgeHeader.innerHTML = "Practising JavaScript. Really difficult!";
+    }, 6000)
+
+    document.querySelector("#stop").addEventListener("click", function (e) {
+        clearTimeout(changeMe);
+        console.log("Stoppped!")
+        document.querySelector("#stop").innerHTML = "Start";
+        document.querySelector("#stop").style.backgroundColor = "red";
+    })
+
+    // setInterval
+
+    const randomNumbers = function () {
+        const numbers = parseInt((Math.random() * 100) + 1);
+        console.log(numbers);
+    }
+
+    const expSetinterval = setInterval(randomNumbers, 2000);
+    clearInterval(expSetinterval);
+
+
+    // Tring the assignment
+
+    let recurringName;
+    const sayName = function () {
+        console.log("Clicked on Start!");
+        recurringName = setInterval(function () {
+            console.log("Kamalsheel Mainali");
+        }, 2000)
+    }
+
+    const stopName = function () {
+        console.log("Clicked on Stop!");
+        recurringName = clearInterval(recurringName);
+    }
+    document.querySelector("#Start").addEventListener("click", sayName);
+    document.querySelector("#Stop").addEventListener("click", stopName);
+
+</script> -->
+
+<script>
+
+    // setTimeout
+    let sayKamalsheel = () => {
+        document.querySelector('h1').innerHTML = "javaScript is really annoying......";
+    }
+    const changeHeading=setTimeout(sayKamalsheel, 3000);
+
+    // clearTimeout
+    document.getElementById("stop").addEventListener('click',()=>{
+        clearTimeout(changeHeading);
+        console.log("Stopped")
+    })
+
+    const randomNumbersWithMyName=function()
+    {
+        console.log(Math.round(Math.random()*100)+1);
+        console.log("Kamalsheel Mainali")
+    }
+   
+    // setInterval
+    let printingNumbers;
+    document.getElementById("Start").addEventListener('click',()=>{
+         printingNumbers=setInterval(randomNumbersWithMyName,1000)
+        console.log("Started Generating Random Numbers with my Name")
+    })
+
+    // clearInterval
+    document.getElementById("Stop").addEventListener('click',()=>{
+        clearInterval(printingNumbers)
+        console.log("Stopped generating Random Numbers with my name")
+    })
+</script>
+
+</html>
